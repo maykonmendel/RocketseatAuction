@@ -20,6 +20,7 @@ builder.Services.AddScoped<GetCurrentAuctionUseCase>();
 builder.Services.AddScoped<IAuctionRepository, AuctionRepository>();
 builder.Services.AddScoped<IOfferRepository, OfferRepository>();
 builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<ILoggedUser, LoggedUser>();
 
 builder.Services.AddDbContext<RocketseatAuctionDbContext>(opt =>
 {

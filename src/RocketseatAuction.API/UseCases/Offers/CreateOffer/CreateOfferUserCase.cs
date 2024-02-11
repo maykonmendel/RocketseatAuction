@@ -7,10 +7,10 @@ namespace RocketseatAuction.API.UseCases.Offers.CreateOffer;
 
 public class CreateOfferUserCase
 {
-    private readonly LoggedUser _loggedUser;
+    private readonly ILoggedUser _loggedUser;
     private readonly IOfferRepository _repository;
 
-    public CreateOfferUserCase(LoggedUser loggedUser, IOfferRepository repository)
+    public CreateOfferUserCase(ILoggedUser loggedUser, IOfferRepository repository)
     {
         _loggedUser = loggedUser;
         _repository = repository;
