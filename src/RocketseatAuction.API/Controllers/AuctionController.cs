@@ -6,7 +6,7 @@ namespace RocketseatAuction.API.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
-public class AuctionController : ControllerBase
+public class AuctionController : RocketseatAuctionBaseController
 {
     [HttpGet]
     [ProducesResponseType(typeof(Auction), StatusCodes.Status200OK)]
@@ -20,5 +20,5 @@ public class AuctionController : ControllerBase
         if (result is null) return NoContent();
 
         return Ok(result);
-    }
+    }    
 }
